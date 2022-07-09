@@ -8,7 +8,6 @@ import remarkGfm from 'remark-gfm'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { Link } from "react-router-dom"
 
-const { Meta } = Card;
 const { Title } = Typography
 
 const Article = () => {
@@ -31,7 +30,7 @@ const Article = () => {
             </Row>
             <Row gutter={10} align="middle" justify="center" style={{ marginBottom: 20 }}>
                 <Col span={24} style={{ width: "100%" }}>
-                    <Title style={{ textAlign: "center" }} italic={true} level={5}>{article?.update_time}<span style={{ marginLeft: 10 }}></span>{article?.letter_num}字
+                    <Title style={{ textAlign: "center" }} italic={true} level={5}>{article?.update_time}<span style={{ marginLeft: 10 }}></span>{article?.letter_num}
                         <span style={{ marginLeft: 10 }}></span>
                         <Link to={`/article/category/${article?.category}`}><span>{article?.category}</span></Link>
                     </Title>
