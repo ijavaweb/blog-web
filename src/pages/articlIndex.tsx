@@ -44,7 +44,6 @@ const ArticleIndex = () => {
                             </Title>
                         </Col>
                     </Row>
-                    <Row>
                         <ReactMarkdown
                             remarkPlugins={[remarkGfm]}
                             components={{
@@ -68,7 +67,6 @@ const ArticleIndex = () => {
                             }}
 
                         >{article ? article.content : ""}</ReactMarkdown>
-                    </Row>
                 </Col>
                 <Col span={4}></Col>
             </Row>

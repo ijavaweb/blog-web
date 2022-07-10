@@ -36,7 +36,6 @@ const Article = () => {
                         </Title>
                     </Col>
                 </Row>
-                <Row>
                     <ReactMarkdown
                         remarkPlugins={[remarkGfm]}
                         components={{
@@ -60,8 +59,6 @@ const Article = () => {
                         }}
 
                     >{article ? article.content : ""}</ReactMarkdown>
-
-                </Row>
             </Col>
             <Col span={4}></Col>
         </Row>
