@@ -5,7 +5,7 @@ import ArticleListAll from "./pages/articleListAll"
 import ArticleIndex from "./pages/articlIndex"
 import ArticleCategoryList from "./pages/articleCategory"
 import {RouteProps} from "react-router"
-
+import {Navigate } from "react-router-dom"
 export const routes: Array<RouteProps> = [
     {
         element:<ArticleIndex />,

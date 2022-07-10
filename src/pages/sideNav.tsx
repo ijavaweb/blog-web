@@ -8,6 +8,7 @@ import { CalendarMode } from 'antd/lib/calendar/generateCalendar';
 import type { Moment } from 'moment';
 import Layout from "antd/lib/layout/layout"
 import locale from "antd/lib/date-picker/locale/zh_CN"
+import {CalendarOutlined,TagOutlined} from '@ant-design/icons';
 
 const { Title } = Typography
 
@@ -32,14 +33,14 @@ const SideNav = () => {
             style={{ marginLeft: 50, marginTop: 100 }}
         >
             <Layout>
-                <Typography.Title level={5}>日历</Typography.Title>
+                <Typography.Title level={5}><CalendarOutlined style={{ marginRight: 5 }}/>日历</Typography.Title>
                 <Calendar locale={locale}
                     fullscreen={false} onPanelChange={onPanelChange} style={{ marginBottom: 100 }} />
             </Layout>
             <List
                 bordered
                 itemLayout="horizontal"
-                header={<Title level={5}>最新文章</Title>}
+                header={<Title level={5}><TagOutlined style={{ marginRight: 5 }}/>最新文章</Title>}
                 dataSource={topArticle}
                 renderItem={item => (
                     <List.Item>

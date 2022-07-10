@@ -3,6 +3,8 @@ import { getCategoryList } from "../api/article"
 import { Typography, List } from "antd"
 import { Link } from "react-router-dom"
 import Sider from "antd/lib/layout/Sider"
+import {SearchOutlined} from '@ant-design/icons';
+
 const { Title } = Typography
 
 const SideNavRight = () => {
@@ -21,7 +23,7 @@ const SideNavRight = () => {
             <List
                 bordered
                 itemLayout="horizontal"
-                header={<Title level={5}>按分类查看文章</Title>}
+                header={<Title level={5}><SearchOutlined style={{ marginRight: 5 }} />按分类查看文章</Title>}
                 dataSource={category}
                 renderItem={item => (
                     <List.Item>
