@@ -1,4 +1,4 @@
-import { Row, Col, Typography } from "antd"
+import { Row, Col, Typography, BackTop } from "antd"
 import { Component, useEffect, useState } from "react"
 import { getArticle } from "../api/article"
 import { article, } from "../types/article"
@@ -7,7 +7,7 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { Link } from "react-router-dom"
-import { ClockCircleOutlined, ReadOutlined, FileSearchOutlined } from '@ant-design/icons';
+import { ClockCircleOutlined, ReadOutlined, FileSearchOutlined, ToTopOutlined } from '@ant-design/icons';
 
 const { Title } = Typography
 
@@ -32,7 +32,7 @@ const Article = () => {
                 <Row gutter={10} align="middle" justify="center" style={{ marginBottom: 20 }}>
                     <Col span={24} style={{ width: "100%" }}>
                         <Title style={{ textAlign: "center" }} italic={true} level={5}><ClockCircleOutlined style={{ marginRight: 5 }} />{article?.update_time}<ReadOutlined style={{ marginLeft: 15, marginRight: 5 }} />{article?.letter_num}
-                            <Link to={`/article/category/${article?.category}`} style={{ color: '#000', fontWeight: "lighter",textDecoration:"underline" }}><FileSearchOutlined style={{ marginLeft: 15, marginRight: 5 }} />{article?.category}</Link></Title>
+                            <Link to={`/article/category/${article?.category}`} style={{ color: '#000', fontWeight: "lighter", textDecoration: "underline" }}><FileSearchOutlined style={{ marginLeft: 15, marginRight: 5 }} />{article?.category}</Link></Title>
                     </Col>
                 </Row>
                 <ReactMarkdown
@@ -58,6 +58,9 @@ const Article = () => {
                     }}
 
                 >{article ? article.content : ""}</ReactMarkdown>
+                <BackTop style={{marginRight:"20%"}}>
+                    <ToTopOutlined style={{ fontSize: '200%', color: '#0099cc'}} />
+                </BackTop>
             </Col>
             <Col span={4}></Col>
         </Row>

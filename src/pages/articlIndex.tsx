@@ -1,15 +1,14 @@
-import { Form, Input, Button, message, Card, Row, Col, List, Avatar, Typography } from "antd"
+import { Card, Row, Col, BackTop, Typography } from "antd"
 import { useEffect, useState } from "react"
 import { getArticleList } from "../api/article"
 import { article } from "../types/article"
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { Link } from "react-router-dom"
-import {ClockCircleOutlined,ReadOutlined,FileSearchOutlined} from '@ant-design/icons';
+import {ClockCircleOutlined,ReadOutlined,FileSearchOutlined,ToTopOutlined} from '@ant-design/icons';
 
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 
-const { Meta } = Card;
 const { Title } = Typography
 
 const ArticleIndex = () => {
@@ -67,6 +66,9 @@ const ArticleIndex = () => {
                             }}
 
                         >{article ? article.content : ""}</ReactMarkdown>
+                                        <BackTop style={{marginRight:"20%"}}>
+                    <ToTopOutlined style={{ fontSize: '200%', color: '#0099cc'}} />
+                </BackTop>
                 </Col>
                 <Col span={4}></Col>
             </Row>
