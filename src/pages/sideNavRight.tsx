@@ -16,7 +16,7 @@ const SideNavRight = () => {
         <Sider
             theme="light"
             width={"20%"}
-            style={{ marginLeft: 50, marginRight: 50, marginTop: 150 }}
+            style={{marginRight: 50, marginTop: 150 }}
         >
             <List
                 bordered

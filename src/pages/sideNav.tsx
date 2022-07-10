@@ -25,7 +25,7 @@ const SideNav = () => {
         <Sider
             theme="light"
             width={"20%"}
-            style={{ marginLeft: 50, marginRight: 50, marginTop: 150 }}
+            style={{ marginLeft: 50, marginTop: 150 }}
         >
             <Calendar fullscreen={false} onPanelChange={onPanelChange} style={{marginBottom:100}}/>
             <List

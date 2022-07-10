@@ -14,7 +14,7 @@ const App = () => {
       <TopNav></TopNav>
       <Layout>
         <SideNav></SideNav>
-        <Content style={{ marginTop: 100, width: "60%" ,height:"100%"}}>
+        <Content style={{ marginTop: 100}}>
           <Routes>
             {routes.map((props) => (
               <Route path={props.path} element={props.element}></Route>
