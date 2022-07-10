@@ -1,7 +1,8 @@
-import { Layout, Menu,MenuProps  } from 'antd';
+import { Layout, Menu,Typography  } from 'antd';
 import { Link, useNavigate } from "react-router-dom"
 
 const { Header } = Layout;
+const { Title } = Typography
 
 const TopNav = () => {
     const navigator = useNavigate()
@@ -23,15 +24,15 @@ const TopNav = () => {
         navigator(path)
     }
     return (
-        <Layout>
-            <Header style={{ background: '#fff' }}>
+        <Layout >
+            <Header style={{ backgroundColor:"lightgrey" }} >
                 <Menu
                     theme="light"
                     mode="horizontal"
+                    style={{marginLeft:"20%",marginRight:"20%",textAlign:"center",backgroundColor:"lightgrey" }}
                 >
                     {items.map((item, index) => (
-                        <Menu.Item key= {index+1} ><Link to={item.path}>{item.label}</Link></Menu.Item>
-
+                        <Menu.Item key= {index+1} ><Link to={item.path} style={{fontSize:20}}>{item.label}</Link></Menu.Item>
                     ))}
                 </Menu>
             </Header>
